@@ -20,13 +20,23 @@
         <img src="img/logo.png" alt="Logo empresa">
       </div>
       <nav class="navegacion" role="navigation">
-        <a  href="naipes.html">Ir a Naipes</a>
+        <ul>
+          <!--El # en href hace creer al programa que hay un enlace, cuando en realidad no hay nada-->
+          <li><a href="nosotros.html">sobre nosotros</a>
+          <li><a href="#cursos">Cursos</a>
+          <li><a href="https://www.google.com">Ir a Google</a>
+            <!--Cuando se quiere enlazar una pagina web es importante agregarle "http://" o "https://" segun el
+            caso -->
+          <li><a href="#noticias">Ir a noticias</a>
+            <!--Cuando se quiere hacer referencia otra parte de la pagina es importante que la parte a la
+            que se quiere enlazar tenga un id (no sirve con class)  y en href debe de tener el # antes de id-->
+        </ul>
       </nav>
     </header>
 
     <main class="contenido-principal" role="main">
       <!-- Es el contenido principal de la pagina WEB -->
-      <section>
+      <section id="cursos">
         <h2>Nuestros cursos</h2>
         <div>
           <h3>HMTL5</h3>
@@ -42,7 +52,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="noticias">
         <h2>Últimas noticias</h2>
         <article role="article">
           <h3>Aprender a programar es muy importante en el siglo XXI</h3>
