@@ -110,13 +110,54 @@
     <aside role="complementary">
       <!--Es lo que acompaña al main, se podría decir que es el elemento lateral que acompaña al main-->
 
-      <h2>Próximos cursos</h2>
-      <div>
-        <h3>PHP</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <h3>MySQL</h3>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-      </div>
+        <table width="300">
+          <caption><h2>Próximos cursos</h2></caption>
+          <!--Caption da una descripcion de la tabla de manera centrada -->
+          <thead><!-- Parte superor de la tabla -->
+            <tr> <!--  Sobre esta linea -->
+              <th>Curso</th> <!-- cada uno de los cuadros -->
+              <th>Precio</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+
+          <tfoot><!-- parte inferir de la tabla -->
+            <tr>
+              <td colspan="3" align="center">No te los puedes perder</td>
+            </tr>
+          </tfoot>
+
+          <tbody><!-- Parte central de la tabla -->
+            <tr>
+              <td align="center">PHP</td>
+              <td align="center">$99</td>
+              <td align="center">12 enero 2019</td>
+            </tr>
+            <tr >
+              <td rowspan="3" align="center">Angular</td>
+              <td align="center">$99</td>
+              <td align="center">15 enero 2019</td>
+            </tr>
+            <tr>
+              <td align="center">$99</td>
+              <td align="center">20 enero 2019</td>
+            </tr>
+            <tr>
+              <td align="center">$99</td>
+              <td align="center">30 enero 2019</td>
+            </tr>
+            <tr>
+              <td align="center">MySQL</td>
+              <td align="center">$99</td>
+              <td align="center">30 enero 2019</td>
+            </tr>
+            <tr>
+              <td align="center">Python</td>
+              <td align="center">$99</td>
+              <td align="center">15 enero 2019</td>
+            </tr>
+          </tbody>
+        </table>
     </aside>
   </div> <!--.contenedor-->
 
