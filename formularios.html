@@ -7,25 +7,50 @@
 <body>
 
   <h2>Creando los formularios</h2>
-
-  <form class="formulario">
+  <label> Todos los campos con <span style="color:red;">*</span> con obligatorios</label>
+  
+  <form class="formulario"> <!-- Si deseo que nada del formulario sea validado desde el form se pone novalidate -->
     <fieldset>
       <legend>Tus datos</legend>
       <label for="nombre">Nombre:</label>
-      <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" autocomplete="off">
-
+      <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" autocomplete="off" required>
+      <label style="color:red">*</label>
       <br><br> <!-- sirve para hacer una separacion -->
 
       <label for="apellido">Apellido:</label>
-      <input type="text" name="apellido" id="apellido" placeholder="Tus apellidos" autocomplete="off">
+      <input type="text" name="apellido" id="apellido" placeholder="Tus apellidos" autocomplete="off" required>
+      <label style="color:red">*</label>
       <br>
-      <label for="sexo">Sexo:</label><br>
+      <label for="sexo">Sexo:</label>
+      <br>
       <input type="radio" name="sexo" value="hombre" checked autofocus>Hombre<br>
       <!-- El checked sirve para seleccionar por defecto esa opcion y el autofous es para que se seleccione automaticamente -->
-      <input type="radio" name="sexo" value="mujer">Mujer<br>
-      <input type="radio" name="sexo" value="otro">Otro<br>
+      <input type="radio" name="sexo" value="mujer">Mujer
+      <br>
+      <input type="radio" name="sexo" value="otro">Otro
+      <br><br>
+      <label>Fecha de cumpleaños</label>
+      <input type="date" name="date">
 
+      <br><br>
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" name="correo" id="correo" placeholder="correo@correo.com" required>
+      <label style="color:red">*</label>
+
+      <br><br>
+      <label for="url">Tu sitio web:</label>
+      <input type="url" name="sitio_web" id="url" placeholder="www.tudominio.com">
+
+      <br><br>
+      <label>¿Cuanto sabes de HTML? 1</label>
+      <input type="range" name="puntaje" min="1" max="10">
+      <label>10</label>
+
+      <br><br>
+      <label>Cantidad de horas diarias que planea invertir en este curso:</label>
+      <input type="number" name="horas" min="1" max="24">
     </fieldset>
+
     <br>
     <fieldset>
       <legend>Informacion sobre tu curso</legend>
@@ -55,8 +80,30 @@
       <input type="checkbox" value="mysql"> MySQL <br>
       <input type="checkbox" value="js"> JavaScript <br>
       <input type="checkbox" value="jquery"> jQuery <br>
-
+      <br>
+      <label>Fecha dque deseas empezar el curso</label>
+      <input type="month" name="date">
     </fieldset>
+
+    <br>
+    <fieldset>
+      <legend>Extra</legend>
+      <label>Las primeras 10 personas reciben una camisa gratis, elige el color:</label>
+      <input type="color" name="color">
+    </fieldset>
+
+    <br>
+    <fieldset>
+      <legend>Usuario y contraseña</legend>
+      <label>Usuario:</label>
+      <input type="text" name="usuario" placeholder="Usuario" required>
+      <label style="color:red">*</label>
+      <br><br>
+      <label>Contraseña:</label>
+      <input type="password" name="contraseña" placeholder="Contraseña" required>
+      <label style="color:red">*</label>
+    </fieldset>
+
     <br>
     <button type="reset" name="button">Borrar</button><!-- los botones se pueden desabilitar -->
     <input type="submit" name="enviar" value="Enviar">
