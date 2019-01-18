@@ -6,7 +6,10 @@
   </head>
   <body>
     <h2>Videos para HTML5</h2>
-    <video controls> <!-- El controls sirve para que aparezcan los controles del vídeo -->
+    <video controls preload="auto" autoplay muted loop poster="img/poster.jpg">
+      <!--El controls sirve para que aparezcan los controles del vídeo -->
+      <!--El preload es la forma en como se cargara el recurso cuando se abre la pagina -->
+      <!--Si uno desea que se reprodusca de manera automatica en Chrome toca ponerle el atrubuto "muted" -->
       <source src=video/codigo.mp4 type="video/mp4"> <!-- Al momento de cargar los videos siempre debe de ir primero el MP4
                                                       porque sí no, en dispositivos como Ipads y Iphones no reproducirán-->
       <source src=video/codigo.webm type="video/webm">
@@ -15,7 +18,7 @@
     </video>
 
     <h2>Audio en HTML5</h2>
-    <audio controls>
+    <audio controls preload="none">
       <source src="audio/audio.m4a" type="audio/mp4"><!-- Al momento de cargar los audios siempre debe de ir primero el MP4
                                                       porque sí no, en dispositivos como Ipads y Iphones no reproducirán-->
       <source src="audio/audio.oga" type="audio/ogg">
