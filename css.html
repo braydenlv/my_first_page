@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Explorando y aprendiendo HTML">
+  <title>Mi primer pagina WEB con HTML5</title>
+  <link rel="stylesheet" href="css/estilos.css"> <!-- esto es para que tome los atributos dados en el archivo estilos.css -->
+</head>
+
+<body>
+  <!-- el div sirve para estructurar contenido en HTML
+  Cuando se crea cualquier contenido  se deberia de dar una clase o un id
+  *id es lo mismo que una clase pero en temas semanticos solo se deberia utilizar una sola vez por documento
+  *class es lo mismo que una id pero en temas semanticos se puede utilizar mas veces en un documento -->
+  <!-- Los roles sirven mucho para hacer una pagina accesible, es decir, las personas que utilicen herramientas
+  para dictados como talkback leeran estos roles y los podrán adelantar hasta la parte que ellos deseen  -->
+  <div class="contenedor">
+    <header role="banner">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo empresa">
+      </div>
+      <nav class="navegacion" role="navigation">
+        <ul>
+          <!--El # en href hace creer al programa que hay un enlace, cuando en realidad no hay nada-->
+          <li><a href="nosotros.html">sobre nosotros</a>
+          <li><a href="#cursos">Cursos</a>
+          <li><a href="https://www.google.com" target="_blank">Ir a Google</a>
+            <!--Cuando se quiere enlazar una pagina web es importante agregarle "http://" o "https://" segun el
+            caso -->
+            <!-- Para que un enlace se abra en otra pestaña y no sobre la que se le dio click se utiliza el
+            atributo target con la opcion _blank de lo contrario se utiliza la opcion _self-->
+          <li><a href="#noticias">Ir a noticias</a>
+            <!--Cuando se quiere hacer referencia otra parte de la pagina es importante que la parte a la
+            que se quiere enlazar tenga un id (no sirve con class)  y en href debe de tener el # antes de id-->
+        </ul>
+      </nav>
+    </header>
+
+    <main class="contenido-principal" role="main">
+      <!-- Es el contenido principal de la pagina WEB -->
+      <h3>Lo que debes de aprender para ser desarrolador web:</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>Agrega estructura a tus desarrollos</dd>
+        <dt>CSS3</dt>
+        <dd>Agregar presentación a tus desarrollos</dd>
+        <dt>JavaScript</dt>
+        <dd>Agrega inteligencia a tus desarrollos</dd>
+      </dl>
+
+      <section id="cursos">
+        <h2>Nuestros cursos</h2>
+        <div>
+          <h3>HMTL5</h3>
+          <img src="img/html5.png" height="200" alt="logo html5">
+          <a href="programa-html5.pdf" download>Descarga aquí el programa</a>
+          <!-- el atributo download en href sirve para permitir que algo pueda ser descargado con solo dar
+          click -->
+          <p>Ventajas de este curso:</p>
+          <ul>
+            <li>Lo puedes tomar en linea
+                <ul>
+                  <li>En Platzi</li>
+                  <li>En Udemy</li>
+                  <li>En Nextu</li>
+                  <li>En Aulafacil</li>
+                </ul>
+            </li>
+            <li>Avanzar a tu ritmo</li>
+            <li>Puedes preguntar tus dudas al instructor</li>
+            <!-- li hace referencia a un elemento de lista -->
+          </ul>
+          <!-- ul es un unordered list, es decir, una lista sin orden -->
+
+          <p>Temarios del curso</p>
+          <ol>
+            <li>Basico de HTML</li>
+            <li>Etiquetas HTML</li>
+            <li>Crear enlaces</li>
+            <li>Crear listas</li>
+          </ol>
+          <!-- ol hace referencia a ordered list, poseen numeración -->
+
+
+
+        </div>
+        <div>
+          <h3>CSS3</h3>
+          <img src="img/css3.png" height="200" alt="logo css3">
+        </div>
+        <div>
+          <h3>JavaScript</h3>
+          <img src="img/js.jpg" height="200" alt="logo js">
+        </div>
+      </section>
+
+      <section id="noticias">
+        <h2>Últimas noticias</h2>
+        <article role="article">
+          <h3>Aprender a programar es muy importante en el siglo XXI</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+        <article role="article">
+          <h3>Esta es una noticia fake</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+      </section>
+    </main> <!--.contenido-->
+
+    <aside role="complementary">
+      <!--Es lo que acompaña al main, se podría decir que es el elemento lateral que acompaña al main-->
+
+        <table width="300">
+          <caption><h2>Próximos cursos</h2></caption>
+          <!--Caption da una descripcion de la tabla de manera centrada -->
+          <thead><!-- Parte superor de la tabla -->
+            <tr> <!--  Sobre esta linea -->
+              <th>Curso</th> <!-- cada uno de los cuadros -->
+              <th>Precio</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+
+          <tfoot><!-- parte inferir de la tabla -->
+            <tr>
+              <td colspan="3" align="center">No te los puedes perder</td>
+            </tr>
+          </tfoot>
+
+          <tbody><!-- Parte central de la tabla -->
+            <tr>
+              <td align="center">PHP</td>
+              <td align="center">$99</td>
+              <td align="center">12 enero 2019</td>
+            </tr>
+            <tr >
+              <td rowspan="3" align="center">Angular</td>
+              <td align="center">$99</td>
+              <td align="center">15 enero 2019</td>
+            </tr>
+            <tr>
+              <td align="center">$99</td>
+              <td align="center">20 enero 2019</td>
+            </tr>
+            <tr>
+              <td align="center">$99</td>
+              <td align="center">30 enero 2019</td>
+            </tr>
+            <tr>
+              <td align="center">MySQL</td>
+              <td align="center">$99</td>
+              <td align="center">30 enero 2019</td>
+            </tr>
+            <tr>
+              <td align="center">Python</td>
+              <td align="center">$99</td>
+              <td align="center">15 enero 2019</td>
+            </tr>
+          </tbody>
+        </table>
+    </aside>
+  </div> <!--.contenedor-->
+
+  <footer role="contentinfo">
+    <!-- Parte inferior del sitio WEB -->
+    <div class="nosotros">
+      <h3>Sobre nuestra escuela</h3>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <div class="menu">
+      <nav class="navegacion" role="navigation">
+        Menú aquí
+      </nav>
+    </div>
+    <p>Cursos de diseño web &mdash; Todos los derechos reservados &copy;</p>
+  </footer>
+
+</body>
+
+</html>
