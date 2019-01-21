@@ -1,3 +1,54 @@
-h2{
+/*Selectores de Id*/
+#titulo{
+  color:blue;
+}
+
+#logo{
+  margin-top: 50px;
+}
+
+/*Selectores clases*/
+.rojo{
   color:red;
+}
+
+/*Selectores id y clases*/
+#titulo.titulo{
+  color:green;
+  font-size: 60px;
+}
+
+.titulo{
+  color:yellow;
+  font-size: 45px;
+}
+.logoImagen{
+  height: 100px;
+}
+/*selectores con 2 clases*/
+.azul.tituloCurso{
+  color:blue;
+}
+
+/*Selectores con elementos HTML*/
+p{
+  color:brown;
+}
+
+h3{
+  color:violet;
+}
+
+img{
+  height: 200px;
+}
+
+/*Selectores con elementos HTML y ID*/
+section#cursos{
+  background: orange;
+}
+
+/*Selectores con elementos HTML y class*/
+section.seccion{
+  background: gray;
 }
