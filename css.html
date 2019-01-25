@@ -63,9 +63,9 @@
           <!-- el atributo download en href sirve para permitir que algo pueda ser descargado con solo dar
           click -->
           <p>Ventajas de este curso:</p>
-          <ul>
+          <ul id="ventajas">
             <li>Lo puedes tomar en linea
-                <ul>
+                <ul id="paginas_elearnig">
                   <li>En Platzi</li>
                   <li>En Udemy</li>
                   <li>En Nextu</li>
@@ -77,6 +77,7 @@
             <!-- li hace referencia a un elemento de lista -->
           </ul>
           <!-- ul es un unordered list, es decir, una lista sin orden -->
+          <h3>No te quedes fuera</h3>
 
           <p>Temarios del curso</p>
           <ol>
@@ -174,11 +175,23 @@
       <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
 
-    <div class="menu">
-      <nav class="navegacion" role="navigation">
-        Menú aquí
-      </nav>
-    </div>
+  <div class="menuFooter">
+  <nav>
+    <ul>
+      <!--El # en href hace creer al programa que hay un enlace, cuando en realidad no hay nada-->
+      <li><a href="nosotros.html">sobre nosotros</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+      <li><a href="https://www.google.com" target="_blank">Ir a Google</a></li>
+        <!--Cuando se quiere enlazar una pagina web es importante agregarle "http://" o "https://" segun el
+        caso -->
+        <!-- Para que un enlace se abra en otra pestaña y no sobre la que se le dio click se utiliza el
+        atributo target con la opcion _blank de lo contrario se utiliza la opcion _self-->
+      <li><a href="#noticias">Ir a noticias</a></li>
+        <!--Cuando se quiere hacer referencia otra parte de la pagina es importante que la parte a la
+        que se quiere enlazar tenga un id (no sirve con class)  y en href debe de tener el # antes de id-->
+    </ul>
+  </nav>
+</div>
     <p>Cursos de diseño web &mdash; Todos los derechos reservados &copy;</p>
   </footer>
 

@@ -52,3 +52,97 @@ section#cursos{
 section.seccion{
   background: gray;
 }
+
+/*Selectores universales
+El important sirve para tomar todos los elementos y aplicarles estos cambios, si no lo tiene los cambios solo lo tomaran los elementos no especificados anteriormente*/
+
+/* *{
+  color:black!important;
+  font-size: 20px!important;
+}*/
+
+#cursos *{
+  font-size: 20px;
+}
+
+/*Selectores de grupos*/
+
+h2, h3, p, a {
+  text-transform: uppercase;
+}
+
+h2, h3 {
+  text-align: center;
+}
+/*Selectores descendientes*/
+nav.navegacion{
+  background-color: orange;
+}
+
+nav.navegacion ul{
+  list-style: none;
+}
+
+nav.navegacion ul li{
+  display: inline-block;
+}
+
+nav.navegacion ul li a{
+  color: white;
+}
+
+/*Selectores con hijos*/
+section#cursos div > ul{
+  border: 1px solid black;
+}
+
+/*Selectores de elementos adyacentes
+sirven para seleccionar lo que hay despues del elemento seleccionado*/
+
+ul#ventajas + h3{
+  background-color: white;
+  color: black;
+  text-align: left;
+  text-transform: none;
+}
+
+/*selectores para enlaces*/
+
+a[href*="google.com"] {
+  color: black!important;
+}
+
+/*selectores por atributos*/
+h2[id="titulo"]{
+  text-align: left;
+}
+
+[class="titulo"]{
+  color: yellow!important;
+}
+
+/*Selectores con pseudo clases*/
+/*Lo que hay a continuacion es lo que se utiliza por lo general para controlar las referencias
+Las pseudoclases se diferencian por llevar los : */
+div.menuFooter nav ul li a:focus,
+div.menuFooter nav ul li a:visited,
+div.menuFooter nav ul li a:active {
+  color:yellow!important:
+  background-color: black!important;
+}
+
+div.menuFooter nav ul li:first-child a {
+  text-decoration: none;
+
+}
+
+div.menuFooter nav ul li a:hover{
+  background-color: blue!important;
+  color: white!important;
+}
+
+/*Las psudoclases aplican también para otras etiquetas*/
+h2:hover{
+  background-color: red!important;
+  color: white!important;
+}
