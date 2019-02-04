@@ -127,7 +127,7 @@ Las pseudoclases se diferencian por llevar los : */
 div.menuFooter nav ul li a:focus,
 div.menuFooter nav ul li a:visited,
 div.menuFooter nav ul li a:active {
-  color:yellow!important:
+  color:yellow!important;
   background-color: black!important;
 }
 
